@@ -1,21 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Chaned_text_slider : MonoBehaviour
 {
-    public Slider slider;
-    public Text text;
-
+    public Slider sliderChangeValue;
+    public Text textShowValueOfSlider;
     void Awake()
     {
-        text = GetComponentInChildren<Text>();
-        slider = GetComponent<Slider>();
+        textShowValueOfSlider = GetComponentInChildren<Text>();
+        sliderChangeValue = GetComponent<Slider>();
     }
 
     public void ShowSliderValue()
     {
-        text.text = slider.value.ToString();
+        textShowValueOfSlider.text = sliderChangeValue.value.ToString();
     }
 }

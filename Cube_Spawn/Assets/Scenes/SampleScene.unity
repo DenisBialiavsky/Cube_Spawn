@@ -136,7 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_Text
-      value: Distance change from 1 to 20 Z
+      value: Distance change Z
+      objectReference: {fileID: 0}
+    - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3237640682386576273, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_Value
@@ -1435,8 +1439,6 @@ MonoBehaviour:
   - {fileID: 8866848492957511576, guid: 3dc18f409cc94bb49b07d1f72023f628, type: 3}
   spawncube:
   - {fileID: 2013540384}
-  buttoncreatecube: {fileID: 0}
-  buttonstopcreatecube: {fileID: 0}
   startTimecubeSpawn: 1
 --- !u!4 &697834084
 Transform:
@@ -2026,7 +2028,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_Text
-      value: Spawn time from 1 to 8
+      value: 'Spawn time '
+      objectReference: {fileID: 0}
+    - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3237640682386576273, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_MaxValue
@@ -3045,7 +3051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_Text
-      value: Distance change from 1 to 20 X
+      value: Distance change X
+      objectReference: {fileID: 0}
+    - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3237640682386576273, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_Value
@@ -3508,7 +3518,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_Text
-      value: speed control from 1 to 20
+      value: speed control
+      objectReference: {fileID: 0}
+    - target: {fileID: 790838947517025976, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3237640682386576273, guid: b45141caf2d61484e891012ce2f36b48, type: 3}
       propertyPath: m_MinValue

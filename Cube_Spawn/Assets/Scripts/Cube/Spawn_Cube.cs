@@ -1,6 +1,3 @@
-using System.Collections;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,49 +8,40 @@ public class Spawn_Cube : MonoBehaviour
 
     public Transform[] spawncube;
 
-    public Button buttoncreatecube;
-    public Button buttonstopcreatecube;
+    
 
-    private int count = 0;
+    private bool count = false;
     private int rand;
     private int randPosition;
     private float timecubeSpawn;
     public float startTimecubeSpawn;
 
-    public void SpawnvalueTime(string spawntime)
-    {
-        startTimecubeSpawn = float.Parse(spawntime);
-    }
+    public void SpawnvalueTime(string spawntime) => startTimecubeSpawn = float.Parse(spawntime);
 
-    public void Spawnvaluecube(float timespawn)
-    {
-        startTimecubeSpawn = timespawn;
-    }
+    public void Spawnvaluecube(float timespawn) => startTimecubeSpawn = timespawn;
+   
 
-    void Start()
-    {
-        timecubeSpawn = startTimecubeSpawn;
-    }
+    void Start() => timecubeSpawn = startTimecubeSpawn;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            count = 1;
+            count = true;
         }
 
         else if (Input.GetKeyDown(KeyCode.F))
         {
-            count = 0;
+            count = false;
         }
 
-        if (count == 1)
+        if (count == true)
         {
             Createcube();
         }
         else 
         {
-            count = 0;
+            count = false;
             
         }
         
@@ -64,8 +52,8 @@ public class Spawn_Cube : MonoBehaviour
     {
         if (timecubeSpawn <= 0)
         {
-            rand = UnityEngine.Random.Range(0, cubemassiv.Length);
-            randPosition = UnityEngine.Random.Range(0, spawncube.Length);
+            rand = Random.Range(0, cubemassiv.Length);
+            randPosition = Random.Range(0, spawncube.Length);
             Instantiate(cubemassiv[rand], spawncube[randPosition].transform.position, Quaternion.identity);
             timecubeSpawn = startTimecubeSpawn;
         }
@@ -73,15 +61,5 @@ public class Spawn_Cube : MonoBehaviour
         {
             timecubeSpawn -= Time.deltaTime;
         }
-    }
-
-    private void CreatecubeonCkick()
-    {
-        buttoncreatecube.onClick.AddListener(Createcube);
-        count = 1;
-    }
-    private void Stopcreatecube()
-    {
-        count = 0;
     }
 }

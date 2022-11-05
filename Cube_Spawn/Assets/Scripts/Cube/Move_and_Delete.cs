@@ -1,8 +1,5 @@
-using System.Collections;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Move_and_Delete : MonoBehaviour
 {
@@ -25,7 +22,7 @@ public class Move_and_Delete : MonoBehaviour
         endPosition.x = float.Parse(changedistanceX);
         endPosition.y = 0.244f;
     }
-    public void Changespeedinputfield(string changespeed)
+    public void ChangeSpeedInputField(string changespeed)
     {
         speed = float.Parse(changespeed);
     }
@@ -40,7 +37,7 @@ public class Move_and_Delete : MonoBehaviour
         endPosition.x = distanceendx;
         endPosition.y = 0.244f;
     }
-    public void Speedvalue(float speed1)
+    public void SpeedValue(float speed1)
     {
         speed = speed1;
         progress += speed1;
@@ -50,11 +47,11 @@ public class Move_and_Delete : MonoBehaviour
     {
         transform.position = startPosition;
     }
-
+    
     void FixedUpdate()
     {
         transform.position = Vector3.Lerp(startPosition, endPosition, progress * Time.deltaTime);
-        Speedvalue(speed);
+        SpeedValue(speed);
 
         if (transform.position == endPosition)
         {
