@@ -8,6 +8,7 @@ public class TextChange : MonoBehaviour
     void Start()
     {
         // Go to the best
+        //Commit in main fast
     }
 
     // Update is called once per frame
